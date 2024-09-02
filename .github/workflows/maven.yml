@@ -29,3 +29,5 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B clean install -DskipTests --file ./_10SpringRestLayeredApp/pom.xml
+    - name: Run the Spring Boot Project
+      run: java -jar -Dserver.port=7076 ./_10SpringRestLayeredApp/target/_10SpringRestLayeredApp-1.0-SNAPSHOT.jar
